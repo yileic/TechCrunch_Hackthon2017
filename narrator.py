@@ -20,8 +20,8 @@ from tempfile import gettempdir
 polly = boto3.client('polly')
 reko = boto3.client('rekognition')
 
-ACCESS_KEY_ID = 'AKIAIEP6GTN6UBPRR4SA'
-ACCESS_SECRET_KEY = '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'
+ACCESS_KEY_ID = ''
+ACCESS_SECRET_KEY = ''
 BUCKET_NAME = 'ycai'
 
 os.environ['AWS_ACCESS_KEY_ID']=ACCESS_KEY_ID
