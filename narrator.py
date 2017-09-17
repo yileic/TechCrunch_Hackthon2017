@@ -116,12 +116,17 @@ if __name__ == '__main__':
     while(True):
         # capture frame-by-frame
         ret, frame = cap.read()
+        # add a rectangle area to place the target text
+        x1, y1, x2, y2 = 300, 100, 900, 600
+        upper_left = (x1, y1)
+        bottom_right = (x2, y2)
+        frame = cv2.rectangle(frame, upper_left, bottom_right, (0,255,0), 5)
         # display the resulting frame
         cv2.imshow('frame',frame)
         key = cv2.waitKey(1) & 0xFF 
         # reading text mode
         if key == ord("r"):        
-            saved_img = frame.copy()            
+            saved_img = frame[y1:y2, x1:x2].copy()            
             cv2.imwrite(img_name, saved_img) 
             text = pytesseract.image_to_string(Image.open(img_name))  
             if text is not None and text.strip() != "":
@@ -130,7 +135,7 @@ if __name__ == '__main__':
                 print 'no text detected'
         # object detection mode
         if key == ord("s"):        
-            saved_img = frame.copy()            
+            saved_img = frame[y1:y2, x1:x2].copy()            
             cv2.imwrite(img_name, saved_img) 
             upload_to_s3(img_name)
             text, label = label_detection(img_name)
