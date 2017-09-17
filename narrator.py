@@ -8,7 +8,6 @@ except ImportError:
 import pytesseract
 import os
 import json
-
 import boto3
 from botocore.client import Config
 from boto3 import Session
@@ -18,10 +17,8 @@ import sys
 import subprocess
 from tempfile import gettempdir
 
-
 polly = boto3.client('polly')
 reko = boto3.client('rekognition')
-
 
 ACCESS_KEY_ID = 'AKIAIEP6GTN6UBPRR4SA'
 ACCESS_SECRET_KEY = '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'
@@ -29,7 +26,6 @@ BUCKET_NAME = 'ycai'
 
 os.environ['AWS_ACCESS_KEY_ID']=ACCESS_KEY_ID
 os.environ['AWS_SECRET_ACCESS_KEY']=ACCESS_SECRET_KEY
-
 
 def upload_to_s3(img_name):
     data = open(img_name, 'rb')
