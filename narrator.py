@@ -140,7 +140,7 @@ if __name__ == '__main__':
             upload_to_s3(img_name)
             text, label = label_detection(img_name)
             print 'label is: ' + label
-            if label == 'Person':
+            if label == 'Person' or label == 'People' or lable == 'Human':
                 text = face_detection(img_name)
             if label != '':
                 text_to_voice(text)
