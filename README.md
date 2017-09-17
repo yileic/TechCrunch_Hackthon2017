@@ -1,4 +1,4 @@
-# TechCrunch_Hackthon2017
+# Surrounding Describer for Blind People
 This is a tool to help blind people know about their surrounding things by using a camera.
 It has 3 major functions:
   1. read out text signs by pressing 'r'
