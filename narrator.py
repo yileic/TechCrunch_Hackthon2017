@@ -116,7 +116,7 @@ if __name__ == '__main__':
     while(True):
         # capture frame-by-frame
         ret, frame = cap.read()
-        # add a rectangle area to place the target text
+        # add a rectangle area to place the target
         x1, y1, x2, y2 = 300, 100, 900, 600
         upper_left = (x1, y1)
         bottom_right = (x2, y2)
@@ -124,7 +124,7 @@ if __name__ == '__main__':
         # display the resulting frame
         cv2.imshow('frame',frame)
         key = cv2.waitKey(1) & 0xFF 
-        # reading text mode
+        # text reading mode
         if key == ord("r"):        
             saved_img = frame[y1:y2, x1:x2].copy()            
             cv2.imwrite(img_name, saved_img) 
