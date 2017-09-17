@@ -12,20 +12,12 @@ It has 3 major functions:
 
 
 ## How we built it
-We use amazon web serivce to do object/facial recognition and text-to-speec service to speak surrounding things to the users.  
-
-
-## Challenges we ran into
-We tried to detect the harzard surronding by the users and sent out the sms messages.  However, it will cost lots of time to train a new image harzard recognition model.
+We used Amazon Rekognition API to do image analysis and Polly API to transform text to speech.
 
 
 ## Accomplishments that we're proud of
-By using this project, we build eyes for blind people to understand more about the world. 
-
-
-## What we learned
-We learned how to use AMS service to upload S3 images and transformed those images into beautiful speech. 
+Through this project, we built eyes for blind people to understand more about the world. 
 
 
 ## What's next for Surrounding Describer for Blind People
-The blind people can conduct certain command when using this app. The image 
+The blind people can conduct certain commands when using this app. For example, when dangerous situation is detected, make a call.
